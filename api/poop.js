@@ -1,7 +1,7 @@
 // const URL = "https://dog.ceo/api/breeds/image/random";
 // console.log(URL)
 
-const URL =`https://dog.ceo/api/breeds/image/random`;
+const URL =`http://shibe.online/api/shibes?count=[1-100]&urls=[true/false]&httpsUrls=[true/false]`;
 
 async function getData(URL){
     try {
