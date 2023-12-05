@@ -1,7 +1,5 @@
-// const URL = "https://dog.ceo/api/breeds/image/random";
-// console.log(URL)
 
-const URL =`http://shibe.online/api/shibes?count=[1-100]&urls=[true/false]&httpsUrls=[true/false]`;
+const URL =`https://api.quotable.io/random`;
 
 async function getData(URL){
     try {
@@ -15,7 +13,7 @@ async function getData(URL){
         document.querySelector("h1").textContent = data.content;
     } catch (error) {
         console.log(error,"UH OH SPAGHETTIOS");
-        document.querySelector("h1").textContent =  "Ahh Snap";
+        document.querySelector("h1").textContent =  "srgaer";
     }
 }
 getData(URL);
