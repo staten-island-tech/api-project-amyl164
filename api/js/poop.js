@@ -18,6 +18,10 @@ DOMSelectors.container.insertAdjacentHTML(
     `<div class="card">
     <h2 class="breed">${data.name}</h2>
     <img src="${data.imageURL}" alt="" class="cardimg">
+    <h3 class="personality">${data.temperament}</h3>
+    <h3 class="lifespan">${data.lifespan}</h3>
+    <h3 class="weightlbs">${data.weightLbs}</h3>
+    <h3 class="heighinches">${data.heightInches}</h3>
   </div>`
 )})};
 insertCards(data)
