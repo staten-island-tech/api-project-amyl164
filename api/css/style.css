@@ -22,7 +22,7 @@ html,
   border: 3px solid black;
   border-radius: 15px;
   width: 500px;
-  height: 70vh;
+  height: 45vh;
 } 
 .cardimg {
   outline-offset: 1rem;

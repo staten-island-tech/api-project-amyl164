@@ -17,11 +17,10 @@ DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
     `<div class="card">
     <h2 class="breed">${data.name}</h2>
-    <img src="${data.imageURL}" alt="" class="cardimg">
-    <h3 class="personality">${data.temperament}</h3>
-    <h3 class="lifespan">${data.lifespan}</h3>
-    <h3 class="weightlbs">${data.weightLbs}</h3>
-    <h3 class="heighinches">${data.heightInches}</h3>
+    <h3 class="personality">${"Temperament: "+data.temperament}</h3>
+    <h3 class="lifespan">${"Lifespan: "+data.lifespan}</h3>
+    <h3 class="weightlbs">${"Weight(lbs): "+data.weightLbs}</h3>
+    <h3 class="heighinches">${"Height(in): "+data.heightInches}</h3>
   </div>`
 )})};
 insertCards(data)
@@ -35,4 +34,6 @@ document.querySelector("h2").textContent = "no work";
 }
 }
 getData (URL);
+
+
 
