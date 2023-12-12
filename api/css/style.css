@@ -45,3 +45,11 @@ h3 {
   border: 3px solid black;
   border-radius: 5px; 
 }
+.header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 1.8rem;
+}
