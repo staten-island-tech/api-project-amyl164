@@ -1,6 +1,6 @@
 import "../css/style.css"
 import { DOMSelectors } from "./dom";
-const URL = `https://api.algobook.info/v1/dogs/all` ;
+const URL = `https://api.algobook.info/v1/dogs/all`;
 //goes before anything bfore getting data from api
 async function getData (URL){
 try {
@@ -35,5 +35,26 @@ document.querySelector("h2").textContent = "no work";
 }
 getData (URL);
 
+function clearfields()
+{
+  DOMSelectors.container.innerHTML = "";
+}
+
+DOMSelectors.form.addEventListener("submit", function(event){
+  event.preventDefault();
+  clearfields()
+  let = DOMSelectors.searchname.value = data.name
+  const search = `https://api.algobook.info/v1/dogs/search/:` +data.name;
+  async function getData (search){
+  try {
+  const response = await fetch (search);
+  if (response.status !=200){
+  throw new Error (response.statusText);
+  }
+  const searchdata = await response.json();
+
+
+})
+getData(search)
 
 
