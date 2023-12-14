@@ -43,8 +43,18 @@ function clearfields()
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
   clearfields()
+  const URLtwo = `https://api.algobook.info/v1/dogs/search/:`+ new data.name;
   DOMSelectors.searchname.value = new data.name
-  const URL2 = `https://api.algobook.info/v1/dogs/search/:search`
-  async function getData(URL2)
-
-})
+  async function getData(URLtwo){
+    try {
+      const responsetwo = await fetch (URLtwo);
+      if(response.status !=200){
+        throw new Error (responsetwo.statusText);
+      }
+      const datatwo = await response.json();
+      function insertCards(arr){
+        arr.forEach((data) => {
+    DOMSelectors.container.insertAdjacentHTML(
+      )})};
+insertCards(data)
+    }}})
