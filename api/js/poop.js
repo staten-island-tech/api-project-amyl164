@@ -43,18 +43,8 @@ function clearfields()
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
   clearfields()
-  let = DOMSelectors.searchname.value = data.name
-  const search = `https://api.algobook.info/v1/dogs/search/:` +data.name;
-  async function getData (search){
-  try {
-  const response = await fetch (search);
-  if (response.status !=200){
-  throw new Error (response.statusText);
-  }
-  const searchdata = await response.json();
-
+  DOMSelectors.searchname.value = new data.name
+  const URL2 = `https://api.algobook.info/v1/dogs/search/:search`
+  async function getData(URL2)
 
 })
-getData(search)
-
-
