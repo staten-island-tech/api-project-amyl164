@@ -43,18 +43,31 @@ function clearfields()
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
   clearfields()
-  const URLtwo = `https://api.algobook.info/v1/dogs/search/:`+ new data.name;
-  DOMSelectors.searchname.value = new data.name
-  async function getData(URLtwo){
-    try {
-      const responsetwo = await fetch (URLtwo);
-      if(response.status !=200){
-        throw new Error (responsetwo.statusText);
-      }
-      const datatwo = await response.json();
-      function insertCards(arr){
-        arr.forEach((data) => {
-    DOMSelectors.container.insertAdjacentHTML(
-      )})};
+  const husky = `https://api.algobook.info/v1/dogs/search/husky` 
+async function getData (husky){
+try {
+const response = await fetch (husky);
+if (response.status !=200){
+throw new Error (response.statusText);
+}
+const data = await response.json();
+function insertCards(arr){
+    arr.forEach((data) => {
+DOMSelectors.container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
+    <h2 class="breed">${data.name}</h2>
+    <h3 class="personality">${"Temperament: "+data.temperament}</h3>
+    <h3 class="lifespan">${"Lifespan: "+data.lifespan}</h3>
+    <h3 class="weightlbs">${"Weight(lbs): "+data.weightLbs}</h3>
+    <h3 class="heighinches">${"Height(in): "+data.heightInches}</h3>
+  </div>`
+)})};
 insertCards(data)
-    }}})
+}
+catch (error) {
+console.log(error, "uhoh")
+document.querySelector("h2").textContent = "no work";
+}
+}
+getData(husky)});
