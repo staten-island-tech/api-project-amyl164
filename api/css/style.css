@@ -53,3 +53,8 @@ h3 {
   justify-content: space-around;
   font-size: 1.8rem;
 }
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}

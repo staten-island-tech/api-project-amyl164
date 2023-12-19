@@ -30,7 +30,7 @@ data.forEach(data => {console.log(data.name)
 }
 catch (error) {
 console.log(error, "uhoh")
-document.querySelector("h2").textContent = "no work";
+document.querySelector("h2").textContent = "api no work";
 }
 }
 getData (URL);
@@ -43,7 +43,8 @@ function clearfields()
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
   clearfields()
-  const husky = `https://api.algobook.info/v1/dogs/search/husky` 
+  let x = DOMSelectors.searchname.value
+  const husky = `https://api.algobook.info/v1/dogs/search/${x}`
 async function getData (husky){
 try {
 const response = await fetch (husky);
@@ -66,8 +67,8 @@ DOMSelectors.container.insertAdjacentHTML(
 insertCards(data)
 }
 catch (error) {
-console.log(error, "uhoh")
-document.querySelector("h2").textContent = "no work";
+console.log(error, "oppsie daisy")
+document.querySelector("h2").textContent = "Check your spelling! Or it might just not be on the api lol";
 }
 }
 getData(husky)});
