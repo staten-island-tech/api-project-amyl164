@@ -39,6 +39,10 @@ function clearfields()
 {
   DOMSelectors.container.innerHTML = "";
 }
+function clearh2()
+{
+  DOMSelectors.h2.innerHTML = "";
+}
 
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
@@ -69,6 +73,11 @@ insertCards(data)
 catch (error) {
 console.log(error, "oppsie daisy")
 document.querySelector("h2").textContent = "Check your spelling! Or it might just not be on the api lol";
+DOMSelectors.form.addEventListener("submit", function(event){
+  event.preventDefault();
+  clearh2()
+})
 }
 }
+
 getData(husky)});
