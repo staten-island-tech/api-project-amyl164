@@ -72,7 +72,7 @@ insertCards(data)
 }
 catch (error) {
 console.log(error, "oppsie daisy")
-document.querySelector("h2").textContent = "Check your spelling! Or it might just not be on the api lol";
+document.querySelector("h2").textContent = "Check your spelling or the API might not have that dog breed!";
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
   clearh2()
