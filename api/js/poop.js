@@ -17,6 +17,7 @@ DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
     `<div class="card">
     <h2 class="breed">${data.name}</h2>
+    <img src="${data.imgUrl}" alt="" class="dogimg">
     <h3 class="personality">${"Temperament: "+data.temperament}</h3>
     <h3 class="lifespan">${"Lifespan: "+data.lifespan}</h3>
     <h3 class="weightlbs">${"Weight(lbs): "+data.weightLbs}</h3>
@@ -62,6 +63,7 @@ DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
     `<div class="card">
     <h2 class="breed">${data.name}</h2>
+    <img src="${data.imgUrl}" alt="" class="dogimg">
     <h3 class="personality">${"Temperament: "+data.temperament}</h3>
     <h3 class="lifespan">${"Lifespan: "+data.lifespan}</h3>
     <h3 class="weightlbs">${"Weight(lbs): "+data.weightLbs}</h3>
