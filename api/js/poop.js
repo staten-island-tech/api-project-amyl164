@@ -81,5 +81,4 @@ DOMSelectors.form.addEventListener("submit", function(event){
 })
 }
 }
-
 getData(husky)});
