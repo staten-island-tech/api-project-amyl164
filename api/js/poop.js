@@ -82,3 +82,35 @@ DOMSelectors.form.addEventListener("submit", function(event){
 }
 }
 getData(husky)});
+
+DOMSelectors.button.addEventListener("click", function(event){
+  event.preventDefault();
+  clearfields()
+  const reset = `https://api.algobook.info/v1/dogs/all`;
+async function getData (reset){
+try {
+const response = await fetch (reset);
+if (response.status !=200){
+throw new Error (response.statusText);
+}
+const data = await response.json();
+function insertCards(arr){
+    arr.forEach((data) => {
+DOMSelectors.container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
+    <h2 class="breed">${data.name}</h2>
+    <img src="${data.imgUrl}" alt="" class="dogimg">
+    <h3 class="personality">${"Temperament: "+data.temperament}</h3>
+    <h3 class="lifespan">${"Lifespan: "+data.lifespan}</h3>
+    <h3 class="weightlbs">${"Weight(lbs): "+data.weightLbs}</h3>
+    <h3 class="heighinches">${"Height(in): "+data.heightInches}</h3>
+  </div>`
+)})}
+insertCards(data)}
+catch (error) {
+console.log(error, "uhoh")
+document.querySelector("h2").textContent = "api no work";
+}
+}
+getData(reset)});
