@@ -1,15 +1,11 @@
 import "../css/style.css"
 import { DOMSelectors } from "./dom";
 const URL = `https://api.algobook.info/v1/dogs/all`;
-//goes before anything bfore getting data from api
 async function getData (URL){
 try {
-//requesting response REST 'API'S
 const response = await fetch (URL);
 if (response.status !=200){
-throw new Error (response.statusText);
-//convert response to json
-}
+throw new Error (response.statusText);}
 const data = await response.json();
 function insertCards(arr){
     arr.forEach((data) => {
@@ -25,24 +21,23 @@ DOMSelectors.container.insertAdjacentHTML(
   </div>`
 )})};
 insertCards(data)
-
 data.forEach(data => {console.log(data.name)
 });
 }
 catch (error) {
 console.log(error, "uhoh")
-document.querySelector("h2").textContent = "api no work";
-}
-}
+DOMSelectors.for_h2.insertAdjacentHTML(
+  `afterbegin`,
+  `<h2 class="h2" alt="Different Type of Dog Breeds">api no work</h2>`
+)}}
 getData (URL);
-
 function clearfields()
 {
   DOMSelectors.container.innerHTML = "";
 }
 function clearh2()
 {
-  DOMSelectors.forh2.innerHTML = "";
+  DOMSelectors.for_h2.innerHTML = "";
 }
 
 DOMSelectors.form.addEventListener("submit", function(event){
@@ -81,9 +76,7 @@ DOMSelectors.for_h2.insertAdjacentHTML(
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
   clearh2()
-})
-}
-}
+})}}
 getData(husky)});
 
 DOMSelectors.button.addEventListener("click", function(event){
@@ -114,7 +107,8 @@ DOMSelectors.container.insertAdjacentHTML(
 insertCards(data)}
 catch (error) {
 console.log(error, "uhoh")
-document.querySelector("h2").textContent = "api no work";
-}
-}
+DOMSelectors.for_h2.insertAdjacentHTML(
+  `afterbegin`,
+  `<h2 class="h2" alt="Different Type of Dog Breeds">api no work</h2>`
+)}}
 getData(reset)});
