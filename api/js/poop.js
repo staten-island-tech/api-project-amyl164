@@ -39,6 +39,9 @@ function clearh2()
 {
   DOMSelectors.for_h2.innerHTML = "";
 }
+function bye(){
+  DOMSelectors.searchname.value = "";
+}
 
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
@@ -65,6 +68,7 @@ DOMSelectors.container.insertAdjacentHTML(
     <h3 class="heighinches">${"Height(in): "+data.heightInches}</h3>
   </div>`
 )})};
+bye()
 insertCards(data)
 }
 catch (error) {
